@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oranjie Bookshelf</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@300;400;700;800&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Oranjie Bookshelf</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#addNewBook">Add New Book</a></li>
+                <li><a href="#currentRead">Currently Reading</a></li>
+                <li><a href="#doneRead">Read</a></li>
+            </ul>
+        </nav>
+
+        <div class="toggle-menu" id="dropdown">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="shelf-section">
+            <h1>ORANJIE BOOKSHELF</h1>
+            <img class="image" src="./assets/undraw_bookshelves_re_lxoy.svg" alt="a girl beside bookshelf">
+            <p>
+                Oranjie Bookshelf helps those of you who like to read books to be able to save your reading list on a
+                digital shelf.
+                Add your books, mark them as read or currently being read, or remove them from the shelf. Oranjie
+                Bookshelf can do it all!
+                Psst! Your Book data will still be saved even if you close this browser. Try it Now!
+            </p>
+        </section>
+
+        <section class="input_section" id="addNewBook">
+            <h2>Add New <span>Book</span></h2>
+            <form id="inputBook">
+                <div class="input">
+                    <label for="inputBookTitle">Title</label>
+                    <input id="inputBookTitle" type="text" required>
+                </div>
+                <div class="input">
+                    <label for="inputBookAuthor">Author</label>
+                    <input id="inputBookAuthor" type="text" required>
+                </div>
+                <div class="input">
+                    <label for="inputBookYear">Year</label>
+                    <input id="inputBookYear" type="number" required>
+                </div>
+                <div class="input_inline">
+                    <input id="inputBookIsComplete" type="checkbox">
+                    <label for="inputBookIsComplete">Read</label>
+                </div>
+                <button id="bookSubmit" type="submit"><span>Put Book To Shelf</span></button>
+            </form>
+        </section>
+
+        <section class="search_section">
+            <form id="searchBook">
+                <input id="searchBookTitle" type="text" placeholder="Search a book by Title...">
+                <button id="searchSubmit" type="submit"><img src="assets/search.svg" alt="search" width="25"></button>
+            </form>
+        </section>
+
+        <section class="book_shelf" id="currentRead">
+            <h2>Currently Reading</h2>
+            <div id="incompleteBookshelfList" class="book_list">
+                <!-- <article class="book_item">
+                        <h3>Book Title</h3>
+                        <p>Penulis: John Doe</p>
+                        <p>Tahun: 2002</p>
+
+                        <div class="action">
+                            <button class="green">Selesai dibaca</button>
+                            <button class="red">Hapus buku</button>
+                        </div>
+                    </article> -->
+
+                    <!-- <section class="empty-shelf">
+                        <h1>There's no book in this shelf.</h1>
+                    </section> -->
+            </div>
+        </section>
+
+        <section class="book_shelf" id="doneRead">
+            <h2>Read</h2>
+            <div id="completeBookshelfList" class="book_list">
+                <!-- <article class="book_item">
+                    <h3>Book Title</h3>
+                    <p>Penulis: John Doe</p>
+                    <p>Tahun: 2002</p>
+
+                    <div class="action">
+                        <button class="orange-gradient">Belum selesai di Baca</button>
+                        <button class="red">Hapus buku</button>
+                    </div>
+                </article> -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Dicoding Academy | Membuat Front-end Web untuk Pemula, 2022 </p>
+        <p>Made by Surya Rosauli Pasaribu</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/storage.js"></script>
+</body>
+
+</html>
